@@ -486,7 +486,7 @@ function App(props) {
               Mainnet DAI
             </Link>
           </Menu.Item>
-          <Menu.Item key="/subgraph">
+          {/* <Menu.Item key="/subgraph">
             <Link
               onClick={() => {
                 setRoute("/subgraph");
@@ -495,7 +495,7 @@ function App(props) {
             >
               Subgraph
             </Link>
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
 
         <Switch>
