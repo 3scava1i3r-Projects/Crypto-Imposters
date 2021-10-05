@@ -219,6 +219,9 @@ for x in range(0, 1):
         [bg, bg, bg, bg, bg, bg, bg, bg, ol, hd, th, th, th, ol, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
         [bg, bg, bg, bg, bg, bg, bg, bg, ol, hd, th, th, th, ol, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg]
     ]
+    
+
+
 
     # choose which bird image to use
     seed(f)
