@@ -16,7 +16,7 @@ contract ImposterFactory is DInterest {
                 depositAmount,
                 maturationTimestamp,
                 false,
-                1,
+                0,
                 uri
             );
     }
