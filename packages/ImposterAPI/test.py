@@ -79,12 +79,12 @@ Basic_Imposter = [
 Devil_Imposter = [
         [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
         [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
-        [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
-        [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
-        [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
-        [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
-        [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
-        [bg, bg, bg, bg, bg, bg, bg, bg, bg, ol, ol, ol, ol, ol, ol, bg, bg, bg, bg, bg, bg, bg, bg, bg],
+        [bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg, rd, bg, bg, bg, bg, bg, bg, bg, bg, bg, bg],
+        [bg, bg, bg, bg, bg, bg, bg, bg, bg, rd, bg, bg, bg, rd, rd, bg, bg, bg, bg, bg, bg, bg, bg, bg],
+        [bg, bg, bg, bg, bg, bg, bg, bg, rd, rd, bg, bg, bg, rd, rd, rd, bg, bg, bg, bg, bg, bg, bg, bg],
+        [bg, bg, bg, bg, bg, bg, bg, rd, rd, rd, bg, bg, bg, rd, rd, rd, bg, bg, bg, bg, bg, bg, bg, bg],
+        [bg, bg, bg, bg, bg, bg, bg, rd, rd, rd, bg, bg, bg, rd, rd, rd, bg, bg, bg, bg, bg, bg, bg, bg],
+        [bg, bg, bg, bg, bg, bg, bg, rd, rd, ol, ol, ol, ol, ol, ol, rd, bg, bg, bg, bg, bg, bg, bg, bg],
         [bg, bg, bg, bg, bg, bg, bg, rd, ol, bg, bg, bg, bg, bg, bg, ol, bg, bg, bg, bg, bg, bg, bg, bg],
         [bg, bg, bg, bg, bg, bg, bg, ol, bg, bg, bg, bg, bg, bg, bg, bg, ol, bg, bg, bg, bg, bg, bg, bg],
         [bg, bg, bg, bg, bg, bg, bg, ol, bg, bg, bg, bg, bg, bg, bg, bg, bg, ol, bg, bg, bg, bg, bg, bg],
@@ -160,6 +160,9 @@ Alien_Imposter = [
         [bg, bg, bg, bg, ol, bg, bg, ol, bg, bg, bg, bg, bg, bg, bg, bg, bg, ol, bg, bg, bg, bg, bg, bg],
      
     ]
+
+
+    
 a = np.array(Basic_Imposter, dtype=np.uint8)
 
 new_image = Image.fromarray(a)
