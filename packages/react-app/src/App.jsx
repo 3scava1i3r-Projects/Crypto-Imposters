@@ -21,7 +21,7 @@ import {
 import { useEventListener } from "eth-hooks/events/useEventListener";
 import { useExchangeEthPrice } from "eth-hooks/dapps/dex";
 // import Hints from "./Hints";
-import { ExampleUI, Hints, Subgraph, FixedNFT } from "./views";
+import { ExampleUI, Hints, Subgraph, FixedNFT, Sale, MakeCNFT } from "./views";
 
 import { useContractConfig } from "./hooks";
 import Portis from "@portis/web3";
@@ -487,6 +487,28 @@ function App(props) {
             </Link>
           </Menu.Item>
 
+          <Menu.Item key="/Sale">
+            <Link
+              onClick={() => {
+                setRoute("/Sale");
+              }}
+              to="/Sale"
+            >
+              Imposter Sale
+            </Link>
+          </Menu.Item>
+
+          <Menu.Item key="/CNFT">
+            <Link
+              onClick={() => {
+                setRoute("/CNFT");
+              }}
+              to="/CNFT"
+            >
+              Glove Making
+            </Link>
+          </Menu.Item>
+
           {/* <Menu.Item key="/mainnetdai">
             <Link
               onClick={() => {
@@ -580,12 +602,15 @@ function App(props) {
           </Route>
 
           <Route path="/FixedNFT">
-            <FixedNFT
-              subgraphUri={props.subgraphUri}
-              tx={tx}
-              writeContracts={writeContracts}
-              mainnetProvider={mainnetProvider}
-            />
+            <FixedNFT />
+          </Route>
+
+          <Route path="/Sale">
+            <Sale />
+          </Route>
+
+          <Route path="/CNFT">
+            <MakeCNFT />
           </Route>
         </Switch>
       </BrowserRouter>
