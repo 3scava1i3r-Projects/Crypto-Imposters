@@ -560,7 +560,7 @@ function App(props) {
               contractConfig={contractConfig}
               chainId={1}
             />
-            
+
             <Contract
               name="UNI"
               customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.UNI}
@@ -569,10 +569,18 @@ function App(props) {
               address={address}
               blockExplorer="https://etherscan.io/"
             />
-           
           </Route>
           <Route path="/subgraph">
             <Subgraph
+              subgraphUri={props.subgraphUri}
+              tx={tx}
+              writeContracts={writeContracts}
+              mainnetProvider={mainnetProvider}
+            />
+          </Route>
+
+          <Route path="/FixedNFT">
+            <FixedNFT
               subgraphUri={props.subgraphUri}
               tx={tx}
               writeContracts={writeContracts}
