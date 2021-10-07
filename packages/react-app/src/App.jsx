@@ -21,7 +21,7 @@ import {
 import { useEventListener } from "eth-hooks/events/useEventListener";
 import { useExchangeEthPrice } from "eth-hooks/dapps/dex";
 // import Hints from "./Hints";
-import { ExampleUI, Hints, Subgraph } from "./views";
+import { ExampleUI, Hints, Subgraph, FixedNFT } from "./views";
 
 import { useContractConfig } from "./hooks";
 import Portis from "@portis/web3";
@@ -466,6 +466,16 @@ function App(props) {
               Hints
             </Link>
           </Menu.Item>
+          <Menu.Item key="/FixedNFT">
+            <Link
+              onClick={() => {
+                setRoute("/FixedNFT");
+              }}
+              to="/FixedNFT"
+            >
+              88mph Imposter
+            </Link>
+          </Menu.Item>
           <Menu.Item key="/exampleui">
             <Link
               onClick={() => {
@@ -476,7 +486,8 @@ function App(props) {
               ExampleUI
             </Link>
           </Menu.Item>
-          <Menu.Item key="/mainnetdai">
+
+          {/* <Menu.Item key="/mainnetdai">
             <Link
               onClick={() => {
                 setRoute("/mainnetdai");
@@ -485,7 +496,7 @@ function App(props) {
             >
               Mainnet DAI
             </Link>
-          </Menu.Item>
+          </Menu.Item> */}
           {/* <Menu.Item key="/subgraph">
             <Link
               onClick={() => {
@@ -507,7 +518,7 @@ function App(props) {
             */}
 
             <Contract
-              name="YourContract"
+              name="ImposterFactory"
               signer={userSigner}
               provider={localProvider}
               address={address}
@@ -549,7 +560,7 @@ function App(props) {
               contractConfig={contractConfig}
               chainId={1}
             />
-            {/*
+            
             <Contract
               name="UNI"
               customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.UNI}
@@ -558,7 +569,7 @@ function App(props) {
               address={address}
               blockExplorer="https://etherscan.io/"
             />
-            */}
+           
           </Route>
           <Route path="/subgraph">
             <Subgraph
