@@ -86,6 +86,8 @@ export default function FixedNFT() {
             console.log(timestamp)
             let finalTS = ( timestamp + (UTS * 86400000) );
             console.log(finalTS)
+
+            
           }}
         >
           Make FIRB!
