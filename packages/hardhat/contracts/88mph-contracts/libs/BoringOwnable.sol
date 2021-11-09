@@ -31,6 +31,7 @@ contract BoringOwnable {
     /// @notice Transfers ownership to `newOwner`. Either directly or claimable by the new pending owner.
     /// Can only be invoked by the current `owner`.
     /// @param newOwner Address of the new owner.
+    /// Can only be invoked by the current `owner`.
     /// @param direct True if `newOwner` should be set immediately. False if `newOwner` needs to use `claimOwnership`.
     /// @param renounce Allows the `newOwner` to be `address(0)` if `direct` and `renounce` is True. Has no effect otherwise.
     function transferOwnership(
