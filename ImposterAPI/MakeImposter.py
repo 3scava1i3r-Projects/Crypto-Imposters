@@ -3,6 +3,13 @@
 # https://pillow.readthedocs.io/en/stable/installation.html
 from PIL import Image
 
+
+
+# Lib needed for json manipulation
+
+import json
+
+
 # library to work with arrays 
 # https://numpy.org/
 import numpy as np
@@ -35,16 +42,11 @@ dirname = os.path.dirname(__file__)
 # the original 24x24 pixel image will be expanded to these dimensions
 dimensions = 480, 480
 
-# tells how many times to iterate through the following mechanism
-# which equals the number of birds
-# e.g. 
-# for x in range(0-200) 
-# would generate 201 birds numbered 0-200
+
 
 def makeImposter():
     for x in range(0, 1):
 
-        # using ETH block number as starting random number seed
         
         b = random.randrange(0,1190029)
         print(b)
@@ -300,7 +302,9 @@ def makeImposter():
 
         res = requests.post(url=url,files={'file':imagedata}, headers=headers)
 
+        
         data = res.json()
+
         
         return data
 
