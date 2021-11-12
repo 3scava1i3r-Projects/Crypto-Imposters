@@ -275,8 +275,8 @@ def makeImposter():
             p = "Alien"
 
         # convert the pixels into an array using numpy
-        array = np.array(pixels, dtype=np.uint8)
-
+        array = np.array(pixels, dtype = np.uint8)
+        print(p)
         # use PIL to create an image from the new array of pixels
         new_image = Image.fromarray(array)
         new_image = new_image.resize(dimensions, resample=0)
@@ -290,8 +290,6 @@ def makeImposter():
         imagedata = image_file.getvalue()
 
 
-        pinataApiKey = "a770d310d147135d5ec4" 
-        pinataSecretApiKey = "076b05a1c38c2910d32a8079e1007d52b8c02264990e0af61fa0e544cd760c78"
         url = "https://api.pinata.cloud/pinning/pinFileToIPFS"
         jsonUrl = "https://api.pinata.cloud/pinning/pinJSONToIPFS"
 
@@ -307,7 +305,9 @@ def makeImposter():
         return data
 
 
+
 @app.route('/')
+
 def home():
     gg = makeImposter()
     res = make_response(jsonify(gg), 200)
@@ -316,3 +316,4 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+

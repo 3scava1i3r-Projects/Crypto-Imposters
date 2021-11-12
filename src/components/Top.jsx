@@ -10,7 +10,7 @@ export default function Top() {
   
   return (
       <>
-      <Web3modal />
+      <h2>ggwp</h2>
       
     </>
   );

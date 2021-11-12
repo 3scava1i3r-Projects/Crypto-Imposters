@@ -4,7 +4,7 @@ import Top from './components/Top';
 function App() {
   return (
     <>
-      <Top />
+      
     </>
   );
 }
